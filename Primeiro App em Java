@@ -1,0 +1,42 @@
+package swing01;
+
+import javax.swing.*;
+import java.awt.*;
+
+
+public class Swing01 {
+        public static void main(String[] args) {
+
+           JFrame frame = new JFrame ("Primeiro App");
+           frame.setSize(500,500);
+           frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+           frame.setLocationRelativeTo(null);
+
+
+           frame.setLayout(new FlowLayout());
+           frame.setLayout(new BorderLayout());
+
+           JButton botao1 = new JButton("Quem sou eu?");
+           JButton botao2 = new JButton("Qual a data em que esse app foi programado?");
+           JButton botao3 = new JButton("Qual IDE eu utilizei?");
+           JButton botao4 = new JButton("Qual Linguagem eu utilizei nesse app?");
+           JButton botao5 = new JButton("Orgulho!");
+
+
+           
+           frame.setLocationRelativeTo(null);
+           frame.add(botao1,BorderLayout.NORTH);
+           frame.add(botao2, BorderLayout.SOUTH);
+           frame.add(botao3, BorderLayout.WEST);
+           frame.add(botao4, BorderLayout.CENTER);
+           frame.add(botao5, BorderLayout.EAST);
+           botao1.addActionListener(e ->JOptionPane.showMessageDialog(frame, "Meu Nome é Vinicius Silva Barbosa, tenho 18 anos, sou filho da Marcela e do Paulo, Namorado da Ana Leticia e estou ingressando na carreira de desenvolvedor back-end com java... "));
+           botao2.addActionListener(e ->JOptionPane.showMessageDialog(frame, "Hoje é Terça Feira, dia 11/02/2025 às 23:11 da noite e estou fazendo meu primeiro programa em java.. Muitos ainda estão por vir!"));
+           botao3.addActionListener(e ->JOptionPane.showMessageDialog(frame, "Estou Usando a IDE 'IntelliJ Community Edition'"));
+           botao4.addActionListener(e ->JOptionPane.showMessageDialog(frame, "A Linguagem de programação utilizada nesse app é JAVA!!"));
+           botao5.addActionListener(e ->JOptionPane.showMessageDialog(frame, "Nesse momento estou muito orgulhoso de mim mesmo, pois, estou conseguindo aprender Java... Prometo dar orgulho para meus pais e minha namorada e sempre me dedicar aos estudos para dar uma vida melhor para eles e retribuir tudo o que já fizeram por mim... amo vcs S2"));
+           frame.setVisible(true);
+
+
+        }
+    }
